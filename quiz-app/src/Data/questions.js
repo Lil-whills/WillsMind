@@ -1,0 +1,123 @@
+// src/data/questions.js
+export const questions = [
+  {
+    id: 1,
+    question: "What is the capital city of France?",
+    options: ["Madrid", "Paris", "Berlin", "Lisbon"],
+    correctAnswer: "Paris",
+  },
+  {
+    id: 2,
+    question: "Who painted the Mona Lisa?",
+    options: ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Michelangelo"],
+    correctAnswer: "Leonardo da Vinci",
+  },
+  {
+    id: 3,
+    question: "Which planet is known as the Red Planet?",
+    options: ["Venus", "Mars", "Jupiter", "Mercury"],
+    correctAnswer: "Mars",
+  },
+  {
+    id: 4,
+    question: "What is the largest ocean on Earth?",
+    options: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+    correctAnswer: "Pacific Ocean",
+  },
+  {
+    id: 5,
+    question: "Which gas do plants absorb from the atmosphere?",
+    options: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+    correctAnswer: "Carbon Dioxide",
+  },
+  {
+    id: 6,
+    question: "Who wrote 'Romeo and Juliet'?",
+    options: ["Charles Dickens", "Mark Twain", "William Shakespeare", "Jane Austen"],
+    correctAnswer: "William Shakespeare",
+  },
+  {
+    id: 7,
+    question: "What is the currency of Japan?",
+    options: ["Yen", "Won", "Ringgit", "Dollar"],
+    correctAnswer: "Yen",
+  },
+  {
+    id: 8,
+    question: "In which continent is the Sahara Desert located?",
+    options: ["Asia", "Africa", "Australia", "North America"],
+    correctAnswer: "Africa",
+  },
+  {
+    id: 9,
+    question: "What is the smallest prime number?",
+    options: ["0", "1", "2", "3"],
+    correctAnswer: "2",
+  },
+  {
+    id: 10,
+    question: "Which animal is known as the 'King of the Jungle'?",
+    options: ["Tiger", "Elephant", "Lion", "Cheetah"],
+    correctAnswer: "Lion",
+  },
+  {
+    id: 11,
+    question: "What is H2O commonly known as?",
+    options: ["Hydrogen", "Salt", "Water", "Oxygen"],
+    correctAnswer: "Water",
+  },
+  {
+    id: 12,
+    question: "Which continent has the most countries?",
+    options: ["Asia", "Africa", "Europe", "South America"],
+    correctAnswer: "Africa",
+  },
+  {
+    id: 13,
+    question: "Who was the first man to step on the Moon?",
+    options: ["Yuri Gagarin", "Neil Armstrong", "Buzz Aldrin", "Michael Collins"],
+    correctAnswer: "Neil Armstrong",
+  },
+  {
+    id: 14,
+    question: "What is the boiling point of water at sea level?",
+    options: ["50°C", "90°C", "100°C", "120°C"],
+    correctAnswer: "100°C",
+  },
+  {
+    id: 15,
+    question: "Which country is famous for the Great Wall?",
+    options: ["India", "China", "Japan", "Thailand"],
+    correctAnswer: "China",
+  },
+  {
+    id: 16,
+    question: "Which language is the most spoken worldwide?",
+    options: ["English", "Mandarin Chinese", "Spanish", "Hindi"],
+    correctAnswer: "Mandarin Chinese",
+  },
+  {
+    id: 17,
+    question: "What is the largest mammal in the world?",
+    options: ["Elephant", "Blue Whale", "Giraffe", "Great White Shark"],
+    correctAnswer: "Blue Whale",
+  },
+  {
+    id: 18,
+    question: "In which sport is the term 'love' used?",
+    options: ["Football", "Tennis", "Basketball", "Cricket"],
+    correctAnswer: "Tennis",
+  },
+  {
+    id: 19,
+    question: "What do bees produce?",
+    options: ["Honey", "Wax", "Sugar", "Milk"],
+    correctAnswer: "Honey",
+  },
+  {
+    id: 20,
+    question: "What is the largest planet in our solar system?",
+    options: ["Earth", "Saturn", "Jupiter", "Neptune"],
+    correctAnswer: "Jupiter",
+  },
+];

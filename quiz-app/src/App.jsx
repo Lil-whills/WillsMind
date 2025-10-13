@@ -11,9 +11,9 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen bg--50">
-      <Navbar />
-      <div className="p-6">
+    <div className="min-h-screen">
+  
+      <div className="">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/student-login" element={<StudentLogin />} />

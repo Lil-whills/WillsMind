@@ -6,7 +6,7 @@ import facebook from '../assets/facebook.webp'
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-950 w-full fixed bottom-0 left-0">
+    <footer className="bg-blue-950 w-full">
       <div className="flex flex-col sm:flex-row justify-between items-center text-center text-white px-8 py-4 max-w-screen-xl mx-auto">
         
         {/* Logo */}
