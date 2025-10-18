@@ -110,12 +110,9 @@ const QuizPage = () => {
       date: new Date().toLocaleString(),
     };
 
-    // 🧠 Store results as an array for all students
     const existingResults = JSON.parse(localStorage.getItem("quizResults")) || [];
     existingResults.push(resultData);
     localStorage.setItem("quizResults", JSON.stringify(existingResults));
-
-    // 🧠 Store latest for current student
     localStorage.setItem("quizResult", JSON.stringify(resultData));
 
     localStorage.removeItem("quizProgress");
@@ -125,47 +122,56 @@ const QuizPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-100 flex flex-col items-center py-10 text-blue-950">
+    <div className="min-h-screen bg-gradient-to-b from-white to-blue-100 flex flex-col items-center py-10 text-blue-950 overflow-hidden">
       <img
         src={logo}
         alt="WillsMind Logo"
-        className="w-24 h-24 rounded-full mb-6 border border-blue-900 shadow-md"
+        className="w-24 h-24 rounded-full mb-6 border border-blue-900 shadow-md hover:scale-110 transition-transform duration-300 hover:cursor-pointer"
       />
 
-      <div className="flex justify-between items-center w-11/12 md:w-3/4 mb-6">
-        <h1 className="text-xl font-bold">
+      <div className="flex flex-col md:flex-row justify-between items-center w-11/12 md:w-3/4 mb-6 gap-3 text-center md:text-left animate-fadeIn">
+        <h1 className="text-xl md:text-2xl font-bold">
           Welcome, <span className="text-green-600">{name}</span> 👋
         </h1>
-        <div className="text-lg font-semibold text-red-600">
-          Time Left: <span>{timeLeft}s</span>
+        <div className="text-lg md:text-xl font-semibold text-red-600 animate-pulse">
+          ⏰ Time Left: <span>{timeLeft}s</span>
         </div>
       </div>
 
       {quizActive && (
-        <div className="bg-white w-11/12 md:w-3/4 lg:w-1/2 p-6 rounded-2xl shadow-lg border border-blue-100">
-          <h2 className="text-lg md:text-xl font-bold mb-4">
+        <div className="bg-white w-11/12 md:w-3/4 lg:w-1/2 p-6 md:p-10 rounded-2xl shadow-lg border border-blue-100 transform transition-all duration-500 hover:shadow-2xl animate-slideUp">
+          <h2 className="text-lg md:text-2xl font-bold mb-4 text-center text-blue-900">
             Question {currentQuestion + 1} of {questions.length}
           </h2>
-          <p className="text-gray-800 mb-6">
+          <p className="text-gray-800 mb-6 text-base md:text-lg leading-relaxed">
             {questions[currentQuestion].question}
           </p>
 
-          {questions[currentQuestion].options.map((option) => (
-            <label key={option} className="block mb-2">
-              <input
-                type="radio"
-                name="option"
-                value={option}
-                checked={selectedAnswer === option}
-                onChange={(e) => setSelectedAnswer(e.target.value)}
-                className="mr-2"
-              />
-              {option}
-            </label>
-          ))}
+          <div className="space-y-3">
+            {questions[currentQuestion].options.map((option) => (
+              <label
+                key={option}
+                className={`block border border-blue-200 rounded-lg px-4 py-2 hover:bg-blue-50 transition-all cursor-pointer ${
+                  selectedAnswer === option
+                    ? "bg-green-100 border-green-500"
+                    : ""
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="option"
+                  value={option}
+                  checked={selectedAnswer === option}
+                  onChange={(e) => setSelectedAnswer(e.target.value)}
+                  className="mr-2 accent-blue-600"
+                />
+                {option}
+              </label>
+            ))}
+          </div>
 
           {message && (
-            <div className="mt-4 text-lg font-semibold text-blue-800">
+            <div className="mt-5 text-lg font-semibold text-center text-blue-800 animate-fadeIn">
               {message}
             </div>
           )}
@@ -173,7 +179,11 @@ const QuizPage = () => {
           <button
             onClick={handleNext}
             disabled={!selectedAnswer}
-            className="mt-6 w-40 bg-green-600 text-white py-2 rounded-xl font-semibold hover:bg-green-700 transition-all"
+            className={`mt-6 w-full sm:w-40 bg-green-600 text-white py-2 rounded-xl font-semibold shadow-md transition-all duration-300 ${
+              selectedAnswer
+                ? "hover:bg-green-700 hover:scale-105 cursor-pointer"
+                : "opacity-50 cursor-not-allowed"
+            }`}
           >
             {currentQuestion === questions.length - 1 ? "Finish" : "Next"}
           </button>
