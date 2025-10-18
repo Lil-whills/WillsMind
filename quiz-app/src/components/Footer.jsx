@@ -22,9 +22,41 @@ const Footer = () => {
 
         {/* Social icons */}
         <div className="flex items-center space-x-3 mt-2 sm:mt-0">
-          <img src={linkdln} alt="LinkedIn" className="w-7 h-7 rounded-full hover:scale-110 transition duration-200 cursor-pointer" />
-          <img src={github} alt="GitHub" className="w-7 h-7 rounded-full hover:scale-110 transition duration-200 cursor-pointer" />
-          <img src={facebook} alt="Facebook" className="w-7 h-7 rounded-full hover:scale-110 transition duration-200 cursor-pointer" />
+          <a
+            href="https://www.linkedin.com/in/ameyaw-williams-kyere-76b60a34b/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={linkdln}
+              alt="LinkedIn"
+              className="w-7 h-7 rounded-full hover:scale-110 transition duration-200 cursor-pointer"
+            />
+          </a>
+
+          <a
+            href="https://github.com/Lil-whills"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={github}
+              alt="GitHub"
+              className="w-7 h-7 rounded-full hover:scale-110 transition duration-200 cursor-pointer"
+            />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/ameyaw-williams-kyere-76b60a34b/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={facebook}
+              alt="Facebook"
+              className="w-7 h-7 rounded-full hover:scale-110 transition duration-200 cursor-pointer"
+            />
+          </a>
         </div>
       </div>
     </footer>

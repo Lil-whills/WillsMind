@@ -30,7 +30,6 @@ const StudentLogin = () => {
       localStorage.setItem("studentData", JSON.stringify(studentData))
       alert("Validation passed! 🎉, redirecting you to the Quiz Page");
       navigate("/quiz")
-      console.log(studentData);
     }
   };
 
